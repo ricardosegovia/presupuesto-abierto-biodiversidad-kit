@@ -1,0 +1,88 @@
+{
+  "name": "biodiversity_conservative",
+  "version": 1,
+  "description": "Proxy léxico conservador de gasto asociado a biodiversidad; no es una clasificación oficial.",
+  "methodology": "Busca familias semánticas explícitas solo en campos de clasificación presupuestaria, nunca en beneficiario, RUT ni texto libre del documento.",
+  "fields": [
+    "nombre_partida",
+    "nombre_capitulo",
+    "nombre_area",
+    "nombre_subtitulo",
+    "nombre_item",
+    "nombre_asignacion",
+    "nombre_bip",
+    "nombre_programa_presupuestario"
+  ],
+  "include_terms": [],
+  "include_patterns": [
+    {
+      "label": "biodiversidad",
+      "pattern": "\\bbiodivers\\w*"
+    },
+    {
+      "label": "areas_protegidas",
+      "pattern": "\\bareas?(?: marinas?)? protegidas?\\b"
+    },
+    {
+      "label": "humedales",
+      "pattern": "\\bhumedales?\\b"
+    },
+    {
+      "label": "bosque_nativo",
+      "pattern": "\\bbosques? nativos?\\b"
+    },
+    {
+      "label": "restauracion_ecologica",
+      "pattern": "\\brestauracion (?:ecologica|ecosistemica|de ecosistemas?)\\b"
+    },
+    {
+      "label": "conservacion",
+      "pattern": "\\bconservacion (?:de (?:la )?)?(?:biodiversidad|ecosistemas?|especies|flora|fauna|marina)\\b"
+    },
+    {
+      "label": "proteccion",
+      "pattern": "\\bproteccion (?:de (?:la )?)?(?:biodiversidad|naturaleza|flora|fauna|ecosistemas?|especies)\\b"
+    },
+    {
+      "label": "parques_nacionales",
+      "pattern": "\\bparques? nacionales?\\b"
+    },
+    {
+      "label": "reservas_nacionales",
+      "pattern": "\\breservas? nacionales?\\b"
+    },
+    {
+      "label": "monumentos_naturales",
+      "pattern": "\\bmonumentos? naturales?\\b"
+    },
+    {
+      "label": "snaspe",
+      "pattern": "\\bsnaspe\\b"
+    },
+    {
+      "label": "servicios_ecosistemicos",
+      "pattern": "\\bservicios? ecosistemicos?\\b"
+    },
+    {
+      "label": "corredores_biologicos",
+      "pattern": "\\bcorredores? biologicos?\\b"
+    },
+    {
+      "label": "recursos_geneticos",
+      "pattern": "\\brecursos? geneticos?\\b"
+    },
+    {
+      "label": "fauna_silvestre",
+      "pattern": "\\bfauna silvestre\\b"
+    },
+    {
+      "label": "flora_y_fauna",
+      "pattern": "\\bflora y fauna\\b"
+    },
+    {
+      "label": "especies_prioritarias",
+      "pattern": "\\bespecies? (?:amenazadas?|nativas?|silvestres?|en peligro)\\b"
+    }
+  ],
+  "exclude_terms": []
+}

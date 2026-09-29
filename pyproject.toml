@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "presupuesto-abierto-biodiversidad-kit"
+version = "0.1.0"
+description = "Contexto y herramientas auditables de solo lectura para explorar gasto y biodiversidad"
+requires-python = ">=3.10"
+dependencies = ["requests>=2.31,<3"]
+
+[project.scripts]
+pa-biodiv = "pa_biodiv.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+pa_biodiv = ["resources/**/*.md", "resources/**/*.json", "resources/**/*.csv"]

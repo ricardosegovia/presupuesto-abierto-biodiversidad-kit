@@ -1,0 +1,65 @@
+{
+  "version": "0.1.0",
+  "snapshot_date": "2026-09-29",
+  "origin": "Proyecto gasto_biodiversidad, selección local autorizada por el usuario; sin dependencia de su ruta.",
+  "references": [
+    {
+      "source": "data/reference/registro_programas_biodiversidad.csv",
+      "target": "reference/registro_programas_biodiversidad.csv",
+      "sha256": "0e3422d97398ca88916d653dc653d86e5a4eb092da922541abb3be16bc2172f8",
+      "rows": 144,
+      "role": "referencia histórica, no coeficientes aplicados"
+    },
+    {
+      "source": "data/reference/lookup_table_glosas_querybuild.csv",
+      "target": "reference/lookup_table_glosas_querybuild.csv",
+      "sha256": "937526d9f3d25c3e4f9ae8d69bac985b172dcaadb84d69213b22d430de44a842",
+      "rows": 144,
+      "role": "coordenadas históricas originales, vigencia pendiente"
+    }
+  ],
+  "adapted": [
+    {
+      "source": "src/presupuesto_abierto/client.py",
+      "sha256": "7ea82def7c0a6549fc0d40bb8854a6c246ebb1daf755f591d6689c8b0f716f0b",
+      "role": "base adaptada; no se garantiza identidad byte a byte"
+    },
+    {
+      "source": "src/presupuesto_abierto/bulk.py",
+      "sha256": "6457d472524c79abf9a9cba6d7b1886c6e69099047dfeaa5ef3266ab3ddb14ba",
+      "role": "base adaptada; no se garantiza identidad byte a byte"
+    },
+    {
+      "source": "tests/test_client.py",
+      "sha256": "4f92e1809da0b77442130f0665ef9b5d09aa16eedf4b9735926ca547324ebd56",
+      "role": "base adaptada; no se garantiza identidad byte a byte"
+    },
+    {
+      "source": "tests/test_bulk.py",
+      "sha256": "a69467991483493f8ded33bda57903863c6652b3848861bc5c486163e7104265",
+      "role": "base adaptada; no se garantiza identidad byte a byte"
+    },
+    {
+      "source": "tests/fixtures/pagos-small.tsv",
+      "sha256": "8444349a2434852e13f00669fa3780b33090a69257715ae0f2d974704829fe7e",
+      "role": "fixture ficticio"
+    },
+    {
+      "source": "profiles/biodiversity_conservative.json",
+      "sha256": "0cfa5b90340ce301b0b651f75443503706c2f6fc13968236d7b740c3cf8882a1",
+      "role": "perfil léxico original"
+    },
+    {
+      "source": "docs/data-model.md",
+      "sha256": "d4fb85ed2f950a0e1322f19bebd3fa2971cda2fc279efe504d9550edd5770893",
+      "role": "contexto histórico"
+    }
+  ],
+  "conditions": {
+    "code": "Uso interno del equipo; no se asigna licencia nueva sin autorización del titular.",
+    "references": "Origen curado PNUD/Tepual citado en tablas; revisar condiciones antes de redistribuir.",
+    "api_data": "Página oficial declara CC BY-SA 4.0; respetar atribución y compartir igual cuando corresponda.",
+    "api_attribution": "Dirección de Presupuestos. Presupuesto Abierto. Santiago de Chile. https://presupuestoabierto.gob.cl/",
+    "original_report": "https://www.undp.org/sites/g/files/zskgke326/files/2025-06/pb_gpbd_chile_2015-2022_3.pdf"
+  }
+}
