@@ -79,6 +79,18 @@ class BulkTests(unittest.TestCase):
         self.assertEqual(result["matched_rows"], 4)
         self.assertEqual(result["total_devengo"], 1750)
 
+    def test_iter_tsv_handles_large_field_values(self):
+        with tempfile.TemporaryDirectory() as directory:
+            target = Path(directory) / "large-field.tsv"
+            huge = "X" * 200_000
+            target.write_text(
+                f"periodo\tdevengo\tnombre_partida\n2025\t150\t{huge}\n",
+                encoding="utf-8",
+            )
+            rows = list(iter_tsv_records(target))
+            self.assertEqual(rows[0]["nombre_partida"], huge)
+            self.assertEqual(rows[0]["devengo"], "150")
+
     def test_download_is_gzip_validated_atomic_and_cached(self):
         content = gzip.compress(FIXTURE.read_bytes())
         response = DownloadResponse(content)

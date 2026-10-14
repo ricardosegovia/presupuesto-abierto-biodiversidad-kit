@@ -8,13 +8,15 @@ Este kit explora ejecución presupuestaria y candidatos de biodiversidad. No pro
 2. API vigente del kit: `src/pa_biodiv/resources/api/access.md`.
 3. Modelo completo: `src/pa_biodiv/resources/domain/data-model.md`.
 4. Metodología y límites en `src/pa_biodiv/resources/domain/`.
-5. Referencias históricas, recetas y caso de tribunales solo cuando sean pertinentes.
+5. Referencias de clasificación, recetas y caso de tribunales antes de cualquier consulta de biodiversidad cuando correspondan al universo.
 
 Si una nota histórica difiere de las instrucciones operativas actuales, prevalecen estas instrucciones y el contrato del kit. Los documentos reconstruidos NO son documentación contractual oficial.
 
 ## Procedimiento obligatorio
 
 Precisar pregunta, año, universo, métrica y finalidad. Si falta una decisión material, preguntar; no inferir que biodiversidad equivale a todo gasto ambiental. Identificar partida, capítulo, programa, área y clasificación cuando proceda, conservando códigos como texto.
+
+Toda consulta sobre gasto en biodiversidad debe utilizar las referencias del kit antes de calcular resultados: `src/pa_biodiv/resources/reference/lookup_table_glosas_querybuild.csv` para construir el cruce de coordenadas y `src/pa_biodiv/resources/reference/registro_programas_biodiversidad.csv` para documentar la regla y su estado. El perfil léxico conservador es solo una señal complementaria; no puede sustituir esas referencias ni justificar por sí solo un cero o un ranking. Tratar `NA` y las coincidencias entre reglas según la metodología, deduplicar registros solapados y declarar si se aplican o no ponderaciones históricas.
 
 Comenzar con una consulta pequeña o catálogo institucional. Revisar esquema, cobertura, límites, variantes de nombres y todas las páginas necesarias. Solo ejecutar descargas anuales mediante una instrucción explícita del usuario; una respuesta vacía nunca dispara una descarga.
 

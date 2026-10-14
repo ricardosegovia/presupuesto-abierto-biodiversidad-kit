@@ -415,6 +415,11 @@ def _text_reader(path: Path) -> tuple[BinaryIO | None, TextIO]:
 def iter_tsv_records(path: str | os.PathLike[str]) -> Iterator[dict[str, str]]:
     """Yield rows without loading an annual TSV or TSV.GZ into memory."""
 
+    # Public annual extracts can have long text fields (for example, beneficiary
+    # names or document identifiers), which exceed Python's default CSV field-size
+    # cap. Make the limit large enough to parse the file without discarding data.
+    csv.field_size_limit(max(csv.field_size_limit(), 64 * 1024 * 1024))
+
     source = Path(path)
     binary: BinaryIO | None = None
     text: TextIO | None = None
